@@ -99,43 +99,58 @@ export class EnhancedJobMonitorDO extends DurableObject {
             const session = this.sessions.get(socket);
             if (!session)
                 return;
-            switch (message.type) {
-                case 'subscribe':
-                    if (message.jobId) {
-                        this.subscribeToJob(socket, message.jobId);
-                        const cached = this.jobStatusCache.get(message.jobId);
-                        if (cached) {
-                            socket.send(JSON.stringify({ type: 'job_update', ...cached }));
-                        }
-                    }
-                    break;
-                case 'unsubscribe':
-                    if (message.jobId) {
-                        this.unsubscribeFromJob(socket, message.jobId);
-                    }
-                    break;
-                case 'ping':
-                    session.lastPing = Date.now();
-                    socket.send(JSON.stringify({ type: 'pong', timestamp: Date.now() }));
-                    break;
-                case 'batch_subscribe':
-                    if (Array.isArray(message.jobIds)) {
-                        for (const jobId of message.jobIds) {
-                            this.subscribeToJob(socket, jobId);
-                        }
-                    }
-                    break;
-            }
+            this.dispatchMessage(socket, session, message);
         }
         catch {
             /* malformed message, ignore */
+        }
+    }
+    /** Dispatch parsed WebSocket message to appropriate handler */
+    dispatchMessage(socket, session, message) {
+        switch (message.type) {
+            case 'subscribe':
+                this.handleSubscribe(socket, message.jobId);
+                break;
+            case 'unsubscribe':
+                if (message.jobId) {
+                    this.unsubscribeFromJob(socket, message.jobId);
+                }
+                break;
+            case 'ping':
+                session.lastPing = Date.now();
+                socket.send(JSON.stringify({ type: 'pong', timestamp: Date.now() }));
+                break;
+            case 'batch_subscribe':
+                this.handleBatchSubscribe(socket, message.jobIds);
+                break;
+        }
+    }
+    /** Handle subscribe message */
+    handleSubscribe(socket, jobId) {
+        if (!jobId)
+            return;
+        this.subscribeToJob(socket, jobId);
+        const cached = this.jobStatusCache.get(jobId);
+        if (cached) {
+            socket.send(JSON.stringify({ type: 'job_update', ...cached }));
+        }
+    }
+    /** Handle batch subscribe message */
+    handleBatchSubscribe(socket, jobIds) {
+        if (!Array.isArray(jobIds))
+            return;
+        for (const jobId of jobIds) {
+            this.subscribeToJob(socket, jobId);
         }
     }
     subscribeToJob(socket, jobId) {
         if (!this.jobSubscriptions.has(jobId)) {
             this.jobSubscriptions.set(jobId, new Set());
         }
-        this.jobSubscriptions.get(jobId).add(socket);
+        const subscribers = this.jobSubscriptions.get(jobId);
+        if (subscribers) {
+            subscribers.add(socket);
+        }
     }
     unsubscribeFromJob(socket, jobId) {
         const subscribers = this.jobSubscriptions.get(jobId);
@@ -159,6 +174,13 @@ export class EnhancedJobMonitorDO extends DurableObject {
     }
     /** Alarm handler: housekeeping only */
     async alarm() {
+        const deadSockets = this.findDeadSockets();
+        this.cleanupDeadSockets(deadSockets);
+        this.pruneOrphanedCache();
+        await this.ctx.storage.setAlarm(Date.now() + 60000);
+    }
+    /** Find sockets that have timed out or are unresponsive */
+    findDeadSockets() {
         const now = Date.now();
         const TIMEOUT = 120000;
         const deadSockets = [];
@@ -166,16 +188,23 @@ export class EnhancedJobMonitorDO extends DurableObject {
             if (session.lastPing && (now - session.lastPing) > TIMEOUT) {
                 deadSockets.push(socket);
             }
-            else if (!session.lastPing && (now - TIMEOUT) > 0) {
-                try {
-                    socket.send(JSON.stringify({ type: 'ping', timestamp: now }));
-                }
-                catch {
-                    /* socket send failed, mark as dead */
-                    deadSockets.push(socket);
-                }
+            else if (!session.lastPing) {
+                this.trySendPingOrMarkDead(socket, now, deadSockets);
             }
         }
+        return deadSockets;
+    }
+    /** Try sending a ping, marking socket as dead on failure */
+    trySendPingOrMarkDead(socket, now, deadSockets) {
+        try {
+            socket.send(JSON.stringify({ type: 'ping', timestamp: now }));
+        }
+        catch {
+            deadSockets.push(socket);
+        }
+    }
+    /** Close and clean up dead sockets */
+    cleanupDeadSockets(deadSockets) {
         for (const socket of deadSockets) {
             this.handleWebSocketClose(socket);
             try {
@@ -185,12 +214,14 @@ export class EnhancedJobMonitorDO extends DurableObject {
                 /* socket close failed, ignore */
             }
         }
+    }
+    /** Remove cached statuses for jobs with no subscribers */
+    pruneOrphanedCache() {
         for (const [jobId] of this.jobStatusCache) {
             if (!this.jobSubscriptions.has(jobId)) {
                 this.jobStatusCache.delete(jobId);
             }
         }
-        await this.ctx.storage.setAlarm(Date.now() + 60000);
     }
     /** Get monitor statistics */
     getStats() {

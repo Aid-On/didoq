@@ -129,12 +129,12 @@ export async function kickAllShards(env, shardCount) {
  * TODO: 実際のDO実装が必要な場合はdidoq v1を参照
  */
 export class DidoQDurableObject {
-    state;
-    env;
-    constructor(state, env) {
-        this.state = state;
-        this.env = env;
-        /* state and env stored via parameter properties */
+    _state;
+    _env;
+    constructor(_state, _env) {
+        this._state = _state;
+        this._env = _env;
+        /* state and env stored via parameter properties for subclass access */
     }
     async fetch(request) {
         const url = new URL(request.url);

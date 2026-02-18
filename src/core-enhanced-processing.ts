@@ -65,23 +65,36 @@ async function handleBatchResults(
     const result = results[i];
     const job = jobs[i];
 
-    if (result.status === 'fulfilled' && result.value.success) {
-      await opts.markJobCompletedFn(job.id, result.value.data);
-    } else {
-      const error = result.status === 'rejected'
-        ? result.reason
-        : result.value?.error;
-      await opts.markJobFailedFn(job.id, error);
-    }
+    await handleSingleResult(opts, job, result);
+  }
+}
 
-    if (opts.config.websocketEnabled) {
-      try {
-        const status = result.status === 'fulfilled' ? 'completed' : 'failed';
-        await notifyJobUpdateInternal(opts.env, job.id, status, opts.shardId);
-      } catch {
-        /* WebSocket notification failed, continue processing */
-      }
-    }
+/**
+ * Handle a single job result: mark completed/failed and optionally notify.
+ */
+async function handleSingleResult(
+  opts: BatchProcessOptions,
+  job: D1JobRecord,
+  result: PromiseSettledResult<{ success: boolean; data?: unknown; error?: string }>,
+): Promise<void> {
+  const isSuccess = result.status === 'fulfilled' && result.value.success;
+
+  if (isSuccess) {
+    await opts.markJobCompletedFn(job.id, (result as PromiseFulfilledResult<{ data?: unknown }>).value.data);
+  } else {
+    const error = result.status === 'rejected'
+      ? result.reason
+      : result.value?.error;
+    await opts.markJobFailedFn(job.id, error);
+  }
+
+  if (!opts.config.websocketEnabled) return;
+
+  try {
+    const status = isSuccess ? 'completed' : 'failed';
+    await notifyJobUpdateInternal(opts.env, job.id, status, opts.shardId);
+  } catch {
+    /* WebSocket notification failed, continue processing */
   }
 }
 

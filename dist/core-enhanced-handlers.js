@@ -26,6 +26,9 @@ export async function processJob(ctx, job) {
 }
 /** Delegate to Worker via Service Binding */
 async function processViaServiceBinding(env, job) {
+    if (!env.WORKER_SERVICE) {
+        throw new Error('WORKER_SERVICE binding not available');
+    }
     const response = await env.WORKER_SERVICE.fetch(new Request('http://internal/process-job', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

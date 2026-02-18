@@ -84,39 +84,61 @@ export async function processNotificationQueue(
   try {
     while (state.notificationQueue.length > 0) {
       const batch = state.notificationQueue.splice(0, 50);
-
-      const groupedUpdates = new Map<string, JobUpdate>();
-      for (const update of batch) {
-        groupedUpdates.set(update.jobId, update);
-      }
-
-      const promises: Promise<void>[] = [];
-
-      for (const [jobId, update] of groupedUpdates) {
-        const subscribers = state.jobSubscriptions.get(jobId);
-        if (!subscribers || subscribers.size === 0) continue;
-
-        const message = JSON.stringify({ type: 'job_update', ...update });
-
-        for (const socket of subscribers) {
-          if (socket.readyState === 1) {
-            promises.push(
-              Promise.resolve(socket.send(message)).catch(() => {
-                /* socket send failed, mark as dead */
-              })
-            );
-          }
-        }
-      }
-
-      if (promises.length > 0) {
-        await Promise.allSettled(promises);
-      }
+      await processBatch(batch, state);
 
       // CPU yielding
       await new Promise(resolve => setTimeout(resolve, 0));
     }
   } finally {
     state.isProcessingQueue.value = false;
+  }
+}
+
+/**
+ * Process a single batch of updates by grouping and sending to subscribers.
+ */
+async function processBatch(
+  batch: JobUpdate[],
+  state: NotificationState,
+): Promise<void> {
+  const groupedUpdates = groupByJobId(batch);
+  const promises: Promise<void>[] = [];
+
+  for (const [jobId, update] of groupedUpdates) {
+    const subscribers = state.jobSubscriptions.get(jobId);
+    if (!subscribers || subscribers.size === 0) continue;
+
+    const message = JSON.stringify({ type: 'job_update', ...update });
+    sendToSubscribers(subscribers, message, promises);
+  }
+
+  if (promises.length > 0) {
+    await Promise.allSettled(promises);
+  }
+}
+
+/** Group updates by jobId, keeping only the latest per job */
+function groupByJobId(batch: JobUpdate[]): Map<string, JobUpdate> {
+  const grouped = new Map<string, JobUpdate>();
+  for (const update of batch) {
+    grouped.set(update.jobId, update);
+  }
+  return grouped;
+}
+
+/** Send a message to all open subscribers, collecting promises */
+function sendToSubscribers(
+  subscribers: Set<WebSocket>,
+  message: string,
+  promises: Promise<void>[],
+): void {
+  for (const socket of subscribers) {
+    if (socket.readyState === 1) {
+      promises.push(
+        Promise.resolve(socket.send(message)).catch(() => {
+          /* socket send failed */
+        })
+      );
+    }
   }
 }

@@ -11,20 +11,20 @@ import type { DidoQEnv, D1JobRecord } from './types';
  * WebSocket接続を管理するDurable Object
  */
 export class JobMonitorDO {
-  private state: DurableObjectState;
-  private env: DidoQEnv;
+  private _state: DurableObjectState;
+  private _env: DidoQEnv;
   private sessions: Map<string, WebSocket> = new Map();
   private jobSubscriptions: Map<string, Set<string>> = new Map(); // jobId -> Set<sessionId>
 
   constructor(state: DurableObjectState, env: DidoQEnv) {
-    this.state = state;
-    this.env = env;
+    this._state = state;
+    this._env = env;
     
     // アラームを設定してジョブ状態を監視
-    this.state.blockConcurrencyWhile(async () => {
-      const alarm = await this.state.storage.getAlarm();
+    this._state.blockConcurrencyWhile(async () => {
+      const alarm = await this._state.storage.getAlarm();
       if (!alarm) {
-        await this.state.storage.setAlarm(Date.now() + 1000); // 1秒後に初回チェック
+        await this._state.storage.setAlarm(Date.now() + 1000); // 1秒後に初回チェック
       }
     });
   }
@@ -65,7 +65,7 @@ export class JobMonitorDO {
       try {
         const message = JSON.parse(event.data as string);
         await this.handleWebSocketMessage(sessionId, message);
-      } catch (error) {
+      } catch {
         server.send(JSON.stringify({
           type: 'error',
           error: 'Invalid message format'
@@ -147,7 +147,10 @@ export class JobMonitorDO {
     if (!this.jobSubscriptions.has(jobId)) {
       this.jobSubscriptions.set(jobId, new Set());
     }
-    this.jobSubscriptions.get(jobId)!.add(sessionId);
+    const subscribers = this.jobSubscriptions.get(jobId);
+    if (subscribers) {
+      subscribers.add(sessionId);
+    }
 
     // 現在のジョブ状態を送信
     const job = await this.getJobStatus(jobId);
@@ -182,7 +185,7 @@ export class JobMonitorDO {
     try {
       const notification = await request.json() as Record<string, unknown>;
       const { jobId, status, data } = notification as { jobId: string; status: string; data: unknown };
-      
+
       // 該当ジョブを監視している全セッションに通知
       const sessions = this.jobSubscriptions.get(jobId);
       if (sessions) {
@@ -194,16 +197,11 @@ export class JobMonitorDO {
           timestamp: Date.now()
         });
 
-        for (const sessionId of sessions) {
-          const ws = this.sessions.get(sessionId);
-          if (ws && ws.readyState === WebSocket.OPEN) {
-            ws.send(message);
-          }
-        }
+        this.broadcastToSessions(sessions, message);
       }
 
       return new Response('OK');
-    } catch (error) {
+    } catch {
       return new Response('Bad Request', { status: 400 });
     }
   }
@@ -214,36 +212,50 @@ export class JobMonitorDO {
   async alarm() {
     // 監視中のジョブの状態をチェック
     for (const jobId of this.jobSubscriptions.keys()) {
-      const job = await this.getJobStatus(jobId);
-      if (job) {
-        const sessions = this.jobSubscriptions.get(jobId);
-        if (sessions) {
-          const message = JSON.stringify({
-            type: 'heartbeat',
-            jobId,
-            status: job.status,
-            timestamp: Date.now()
-          });
-
-          for (const sessionId of sessions) {
-            const ws = this.sessions.get(sessionId);
-            if (ws && ws.readyState === WebSocket.OPEN) {
-              ws.send(message);
-            }
-          }
-        }
-      }
+      await this.checkAndNotifyJob(jobId);
     }
 
     // 次のアラームを設定（5秒後）
-    await this.state.storage.setAlarm(Date.now() + 5000);
+    await this._state.storage.setAlarm(Date.now() + 5000);
+  }
+
+  /**
+   * 単一ジョブの状態をチェックし、サブスクライバーに通知
+   */
+  private async checkAndNotifyJob(jobId: string): Promise<void> {
+    const job = await this.getJobStatus(jobId);
+    if (!job) return;
+
+    const sessions = this.jobSubscriptions.get(jobId);
+    if (!sessions) return;
+
+    const message = JSON.stringify({
+      type: 'heartbeat',
+      jobId,
+      status: job.status,
+      timestamp: Date.now()
+    });
+
+    this.broadcastToSessions(sessions, message);
+  }
+
+  /**
+   * セッション群にメッセージをブロードキャスト
+   */
+  private broadcastToSessions(sessionIds: Set<string>, message: string): void {
+    for (const sessionId of sessionIds) {
+      const ws = this.sessions.get(sessionId);
+      if (ws && ws.readyState === WebSocket.OPEN) {
+        ws.send(message);
+      }
+    }
   }
 
   /**
    * ジョブステータスを取得
    */
   private async getJobStatus(jobId: string): Promise<D1JobRecord | null> {
-    const result = await this.env.DB.prepare(
+    const result = await this._env.DB.prepare(
       'SELECT * FROM jobs WHERE id = ?'
     )
       .bind(jobId)

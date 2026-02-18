@@ -57,6 +57,11 @@ export declare class FluentJob<TEnv extends DidoQEnv = DidoQEnv, TPayload = unkn
     }>;
     /** Process job as a nagare Stream */
     stream(): Stream<JobEvent<TPayload>>;
+    /**
+     * Handle a single poll result, emitting events as appropriate.
+     * Returns true if the job has reached a terminal state.
+     */
+    private _handlePollResult;
     /** Get job status from D1 */
     private _getJobStatus;
     /** Emit event to all handlers */

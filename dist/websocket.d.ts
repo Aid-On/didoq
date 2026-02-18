@@ -9,8 +9,8 @@ import type { DidoQEnv } from './types';
  * WebSocket接続を管理するDurable Object
  */
 export declare class JobMonitorDO {
-    private state;
-    private env;
+    private _state;
+    private _env;
     private sessions;
     private jobSubscriptions;
     constructor(state: DurableObjectState, env: DidoQEnv);
@@ -43,6 +43,14 @@ export declare class JobMonitorDO {
      * アラーム処理（定期的にジョブ状態をチェック）
      */
     alarm(): Promise<void>;
+    /**
+     * 単一ジョブの状態をチェックし、サブスクライバーに通知
+     */
+    private checkAndNotifyJob;
+    /**
+     * セッション群にメッセージをブロードキャスト
+     */
+    private broadcastToSessions;
     /**
      * ジョブステータスを取得
      */

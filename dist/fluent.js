@@ -109,32 +109,9 @@ export class FluentJob {
                     try {
                         const job = await this._getJobStatus(jobId);
                         if (job) {
-                            if (job.status === 'processing' && job.last_heartbeat) {
-                                controller.next({
-                                    type: 'heartbeat',
-                                    jobId,
-                                    timestamp: job.last_heartbeat,
-                                });
-                            }
-                            if (job.status === 'completed') {
-                                controller.next({
-                                    type: 'completed',
-                                    jobId,
-                                    timestamp: job.completed_at || Date.now(),
-                                    data: job.parsedPayload,
-                                });
+                            const done = this._handlePollResult(controller, jobId, job);
+                            if (done) {
                                 clearInterval(pollInterval);
-                                controller.complete();
-                            }
-                            if (job.status === 'failed') {
-                                controller.next({
-                                    type: 'failed',
-                                    jobId,
-                                    timestamp: job.completed_at || Date.now(),
-                                    error: job.error_message || 'Unknown error',
-                                });
-                                clearInterval(pollInterval);
-                                controller.complete();
                             }
                         }
                     }
@@ -147,6 +124,40 @@ export class FluentJob {
                 controller.error(error);
             });
         });
+    }
+    /**
+     * Handle a single poll result, emitting events as appropriate.
+     * Returns true if the job has reached a terminal state.
+     */
+    _handlePollResult(controller, jobId, job) {
+        if (job.status === 'processing' && job.last_heartbeat) {
+            controller.next({
+                type: 'heartbeat',
+                jobId,
+                timestamp: job.last_heartbeat,
+            });
+        }
+        if (job.status === 'completed') {
+            controller.next({
+                type: 'completed',
+                jobId,
+                timestamp: job.completed_at || Date.now(),
+                data: job.parsedPayload,
+            });
+            controller.complete();
+            return true;
+        }
+        if (job.status === 'failed') {
+            controller.next({
+                type: 'failed',
+                jobId,
+                timestamp: job.completed_at || Date.now(),
+                error: job.error_message || 'Unknown error',
+            });
+            controller.complete();
+            return true;
+        }
+        return false;
     }
     /** Get job status from D1 */
     async _getJobStatus(jobId) {

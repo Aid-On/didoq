@@ -53,8 +53,8 @@ export declare function kickAllShards(env: DidoQEnv, shardCount: number): Promis
  * TODO: 実際のDO実装が必要な場合はdidoq v1を参照
  */
 export declare class DidoQDurableObject {
-    private state;
-    private env;
-    constructor(state: DurableObjectState, env: DidoQEnv);
+    private _state;
+    private _env;
+    constructor(_state: DurableObjectState, _env: DidoQEnv);
     fetch(request: Request): Promise<Response>;
 }

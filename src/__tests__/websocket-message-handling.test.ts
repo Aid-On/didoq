@@ -26,7 +26,10 @@ class MockWebSocketWithEvents {
     if (!this.eventHandlers.has(event)) {
       this.eventHandlers.set(event, []);
     }
-    this.eventHandlers.get(event)!.push(handler);
+    const handlers = this.eventHandlers.get(event);
+    if (handlers) {
+      handlers.push(handler);
+    }
   }
 
   removeEventListener(event: string, handler: EventHandler): void {

@@ -3,14 +3,13 @@
  * Independent implementation without didoq v1 dependency
  */
 
-import type { 
-  DidoQConfig, 
+import type {
+  DidoQConfig,
   DidoQEnv,
   JobEnqueueRequest,
   JobCompleteRequest,
   QueueInfo,
   AggregatedQueueInfo,
-  D1JobRecord 
 } from './types';
 import { DEFAULT_CONFIG } from './types';
 
@@ -206,10 +205,10 @@ export async function kickAllShards(
  */
 export class DidoQDurableObject {
   constructor(
-    private state: DurableObjectState,
-    private env: DidoQEnv
+    private _state: DurableObjectState,
+    private _env: DidoQEnv
   ) {
-    /* state and env stored via parameter properties */
+    /* state and env stored via parameter properties for subclass access */
   }
 
   async fetch(request: Request): Promise<Response> {
