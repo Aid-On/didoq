@@ -1,0 +1,77 @@
+{
+  "name": "@aid-on/nagare",
+  "version": "0.1.0",
+  "description": "Universal streaming interface built on Web Streams API for edge computing environments with reactive extensions",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "README.ja.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "streaming",
+    "webstreams",
+    "web-streams",
+    "rxjs-like",
+    "reactive",
+    "edge-computing",
+    "cloudflare-workers",
+    "deno",
+    "vercel-edge",
+    "backpressure",
+    "async",
+    "operators",
+    "typescript",
+    "serverless",
+    "sse",
+    "server-sent-events",
+    "real-time",
+    "observable"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "benchmark": "npx tsx benchmarks/basic.ts"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241230.0",
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8",
+    "tsx": "^4.19.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Aid-On/aid-on-platform.git",
+    "directory": "packages/nagare"
+  },
+  "homepage": "https://github.com/Aid-On/aid-on-platform/tree/main/packages/nagare",
+  "bugs": {
+    "url": "https://github.com/Aid-On/aid-on-platform/issues"
+  },
+  "author": "Aid-On Platform",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "peerDependencies": {
+    "@cloudflare/workers-types": "^4.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@cloudflare/workers-types": {
+      "optional": true
+    }
+  }
+}
