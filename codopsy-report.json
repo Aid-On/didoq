@@ -1,0 +1,4153 @@
+{
+  "timestamp": "2026-02-17T14:11:17.868Z",
+  "targetDir": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2",
+  "files": [
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced-advanced.test.ts",
+      "complexity": {
+        "cyclomatic": 8,
+        "cognitive": 8,
+        "functions": [
+          {
+            "name": "toString",
+            "line": 20,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "waitUntil",
+            "line": 23,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "getPendingPromises",
+            "line": 29,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "clearPendingPromises",
+            "line": 33,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "get",
+            "line": 38,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "put",
+            "line": 39,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "delete",
+            "line": 42,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "getAlarm",
+            "line": 45,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "setAlarm",
+            "line": 48,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "deleteAlarm",
+            "line": 51,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "prepare",
+            "line": 61,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "bind",
+            "line": 63,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "all",
+            "line": 64,
+            "complexity": 4,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "(anonymous)",
+            "line": 74,
+            "complexity": 8,
+            "cognitiveComplexity": 8
+          },
+          {
+            "name": "(anonymous)",
+            "line": 97,
+            "complexity": 5,
+            "cognitiveComplexity": 4
+          },
+          {
+            "name": "(anonymous)",
+            "line": 106,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 118,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 119,
+            "complexity": 2,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "(anonymous)",
+            "line": 120,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "run",
+            "line": 134,
+            "complexity": 4,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "(anonymous)",
+            "line": 164,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "if",
+            "line": 172,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 176,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "if",
+            "line": 177,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "if",
+            "line": 184,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 188,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "if",
+            "line": 189,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "(anonymous)",
+            "line": 229,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 233,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 246,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 252,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 264,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 268,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 269,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "(anonymous)",
+            "line": 291,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 295,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 300,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "(anonymous)",
+            "line": 319,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 320,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 331,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 332,
+            "complexity": 4,
+            "cognitiveComplexity": 5
+          },
+          {
+            "name": "(anonymous)",
+            "line": 365,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 393,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 398,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 403,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 404,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 424,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "(anonymous)",
+            "line": 434,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 435,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 444,
+            "complexity": 3,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "(anonymous)",
+            "line": 455,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "(anonymous)",
+            "line": 465,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 466,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 475,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 476,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 499,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 500,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 501,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 510,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 511,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "(anonymous)",
+            "line": 530,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced-advanced.test.ts",
+          "line": 15,
+          "column": 40,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced-advanced.test.ts",
+          "line": 16,
+          "column": 38,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced-advanced.test.ts",
+          "line": 23,
+          "column": 36,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced-advanced.test.ts",
+          "line": 39,
+          "column": 37,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced-advanced.test.ts",
+          "line": 54,
+          "column": 8,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced-advanced.test.ts",
+          "line": 59,
+          "column": 50,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced-advanced.test.ts",
+          "line": 63,
+          "column": 25,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced-advanced.test.ts",
+          "line": 107,
+          "column": 38,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced-advanced.test.ts",
+          "line": 127,
+          "column": 24,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced-advanced.test.ts",
+          "line": 143,
+          "column": 36,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced-advanced.test.ts",
+          "line": 256,
+          "column": 21,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced-advanced.test.ts",
+          "line": 257,
+          "column": 24,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced-advanced.test.ts",
+          "line": 258,
+          "column": 26,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced-advanced.test.ts",
+          "line": 261,
+          "column": 52,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced-advanced.test.ts",
+          "line": 346,
+          "column": 31,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced-advanced.test.ts",
+          "line": 369,
+          "column": 29,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced-advanced.test.ts",
+          "line": 419,
+          "column": 29,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced-advanced.test.ts",
+          "line": 423,
+          "column": 43,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced-advanced.test.ts",
+          "line": 424,
+          "column": 46,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced-advanced.test.ts",
+          "line": 455,
+          "column": 46,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced-advanced.test.ts",
+          "line": 172,
+          "column": 11,
+          "severity": "warning",
+          "rule": "no-empty-function",
+          "message": "Unexpected empty function"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced-advanced.test.ts",
+          "line": 184,
+          "column": 11,
+          "severity": "warning",
+          "rule": "no-empty-function",
+          "message": "Unexpected empty function"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced-advanced.test.ts",
+          "line": 555,
+          "column": 1,
+          "severity": "warning",
+          "rule": "max-lines",
+          "message": "File has 555 lines, exceeds maximum of 300"
+        }
+      ],
+      "score": {
+        "score": 50,
+        "grade": "D"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced.test.ts",
+      "complexity": {
+        "cyclomatic": 11,
+        "cognitive": 12,
+        "functions": [
+          {
+            "name": "toString",
+            "line": 19,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "waitUntil",
+            "line": 22,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "get",
+            "line": 27,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "put",
+            "line": 28,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "delete",
+            "line": 31,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "getAlarm",
+            "line": 34,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "setAlarm",
+            "line": 37,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "deleteAlarm",
+            "line": 40,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 46,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 51,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "prepare",
+            "line": 58,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "bind",
+            "line": 60,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "all",
+            "line": 61,
+            "complexity": 4,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "(anonymous)",
+            "line": 70,
+            "complexity": 7,
+            "cognitiveComplexity": 6
+          },
+          {
+            "name": "(anonymous)",
+            "line": 94,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 106,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 107,
+            "complexity": 2,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "(anonymous)",
+            "line": 108,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "run",
+            "line": 122,
+            "complexity": 11,
+            "cognitiveComplexity": 12
+          },
+          {
+            "name": "(anonymous)",
+            "line": 150,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "(anonymous)",
+            "line": 163,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 176,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "addJob",
+            "line": 191,
+            "complexity": 8,
+            "cognitiveComplexity": 7
+          },
+          {
+            "name": "getJobs",
+            "line": 212,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "getQueryLog",
+            "line": 216,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "clearJobs",
+            "line": 220,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 226,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 232,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 254,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 258,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 259,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 268,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 279,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 280,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 308,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 309,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 324,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 339,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 343,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "(anonymous)",
+            "line": 359,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 364,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 365,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 386,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 387,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 393,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 406,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 411,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 412,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 431,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 445,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 446,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 456,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced.test.ts",
+          "line": 15,
+          "column": 40,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced.test.ts",
+          "line": 22,
+          "column": 36,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced.test.ts",
+          "line": 28,
+          "column": 37,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced.test.ts",
+          "line": 43,
+          "column": 8,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced.test.ts",
+          "line": 56,
+          "column": 50,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced.test.ts",
+          "line": 60,
+          "column": 25,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced.test.ts",
+          "line": 95,
+          "column": 38,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced.test.ts",
+          "line": 115,
+          "column": 24,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced.test.ts",
+          "line": 129,
+          "column": 36,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced.test.ts",
+          "line": 236,
+          "column": 21,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced.test.ts",
+          "line": 237,
+          "column": 24,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced.test.ts",
+          "line": 238,
+          "column": 26,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced.test.ts",
+          "line": 241,
+          "column": 52,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced.test.ts",
+          "line": 244,
+          "column": 14,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced.test.ts",
+          "line": 264,
+          "column": 45,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced.test.ts",
+          "line": 274,
+          "column": 45,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced.test.ts",
+          "line": 297,
+          "column": 47,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced.test.ts",
+          "line": 314,
+          "column": 47,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced.test.ts",
+          "line": 370,
+          "column": 29,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced.test.ts",
+          "line": 398,
+          "column": 33,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced.test.ts",
+          "line": 424,
+          "column": 46,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced.test.ts",
+          "line": 436,
+          "column": 45,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced.test.ts",
+          "line": 452,
+          "column": 47,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced.test.ts",
+          "line": 467,
+          "column": 1,
+          "severity": "warning",
+          "rule": "max-lines",
+          "message": "File has 467 lines, exceeds maximum of 300"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/core-enhanced.test.ts",
+          "line": 122,
+          "column": 1,
+          "severity": "warning",
+          "rule": "max-complexity",
+          "message": "Function \"run\" has a cyclomatic complexity of 11 (threshold: 10)"
+        }
+      ],
+      "score": {
+        "score": 47,
+        "grade": "D"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/websocket-enhanced.test.ts",
+      "complexity": {
+        "cyclomatic": 2,
+        "cognitive": 1,
+        "functions": [
+          {
+            "name": "constructor",
+            "line": 16,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "constructor",
+            "line": 31,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "toString",
+            "line": 48,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "waitUntil",
+            "line": 51,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "acceptWebSocket",
+            "line": 55,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "getWebSockets",
+            "line": 59,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "get",
+            "line": 64,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "put",
+            "line": 65,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "delete",
+            "line": 68,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "getAlarm",
+            "line": 71,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "setAlarm",
+            "line": 74,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "deleteAlarm",
+            "line": 77,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 83,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 88,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 100,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 104,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 105,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 117,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 125,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 126,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 146,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 168,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 175,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 176,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 204,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 205,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 218,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 219,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 231,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/websocket-enhanced.test.ts",
+          "line": 38,
+          "column": 45,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/websocket-enhanced.test.ts",
+          "line": 44,
+          "column": 40,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/websocket-enhanced.test.ts",
+          "line": 49,
+          "column": 8,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/websocket-enhanced.test.ts",
+          "line": 51,
+          "column": 36,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/websocket-enhanced.test.ts",
+          "line": 65,
+          "column": 37,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/websocket-enhanced.test.ts",
+          "line": 80,
+          "column": 8,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/websocket-enhanced.test.ts",
+          "line": 86,
+          "column": 12,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/websocket-enhanced.test.ts",
+          "line": 91,
+          "column": 49,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/websocket-enhanced.test.ts",
+          "line": 94,
+          "column": 41,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/websocket-enhanced.test.ts",
+          "line": 142,
+          "column": 47,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/websocket-enhanced.test.ts",
+          "line": 152,
+          "column": 76,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/websocket-enhanced.test.ts",
+          "line": 198,
+          "column": 47,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/websocket-enhanced.test.ts",
+          "line": 210,
+          "column": 46,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        }
+      ],
+      "score": {
+        "score": 61,
+        "grade": "C"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/websocket-message-handling.test.ts",
+      "complexity": {
+        "cyclomatic": 3,
+        "cognitive": 3,
+        "functions": [
+          {
+            "name": "constructor",
+            "line": 16,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "addEventListener",
+            "line": 23,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "removeEventListener",
+            "line": 30,
+            "complexity": 3,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "triggerEvent",
+            "line": 41,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "(anonymous)",
+            "line": 43,
+            "complexity": 2,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "constructor",
+            "line": 58,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "toString",
+            "line": 71,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "waitUntil",
+            "line": 74,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "acceptWebSocket",
+            "line": 78,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "getWebSockets",
+            "line": 82,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "get",
+            "line": 87,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "put",
+            "line": 88,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "getAlarm",
+            "line": 91,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "setAlarm",
+            "line": 92,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 96,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 103,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 124,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 125,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 141,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 142,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 155,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 168,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 188,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 189,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 215,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 226,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 258,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 259,
+            "complexity": 3,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "(anonymous)",
+            "line": 267,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 271,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 284,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 285,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 311,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 316,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/websocket-message-handling.test.ts",
+          "line": 41,
+          "column": 38,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/websocket-message-handling.test.ts",
+          "line": 66,
+          "column": 27,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/websocket-message-handling.test.ts",
+          "line": 67,
+          "column": 40,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/websocket-message-handling.test.ts",
+          "line": 74,
+          "column": 36,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/websocket-message-handling.test.ts",
+          "line": 78,
+          "column": 23,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/websocket-message-handling.test.ts",
+          "line": 82,
+          "column": 20,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/websocket-message-handling.test.ts",
+          "line": 88,
+          "column": 37,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/websocket-message-handling.test.ts",
+          "line": 99,
+          "column": 12,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/websocket-message-handling.test.ts",
+          "line": 105,
+          "column": 49,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/websocket-message-handling.test.ts",
+          "line": 109,
+          "column": 49,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/websocket-message-handling.test.ts",
+          "line": 264,
+          "column": 37,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/websocket-message-handling.test.ts",
+          "line": 92,
+          "column": 15,
+          "severity": "warning",
+          "rule": "no-empty-function",
+          "message": "Unexpected empty function"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/websocket-message-handling.test.ts",
+          "line": 100,
+          "column": 7,
+          "severity": "info",
+          "rule": "prefer-const",
+          "message": "'wsClient' is declared with let; consider using const if not reassigned"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/__tests__/websocket-message-handling.test.ts",
+          "line": 322,
+          "column": 1,
+          "severity": "warning",
+          "rule": "max-lines",
+          "message": "File has 322 lines, exceeds maximum of 300"
+        }
+      ],
+      "score": {
+        "score": 50,
+        "grade": "D"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/core-enhanced-handlers.ts",
+      "complexity": {
+        "cyclomatic": 13,
+        "cognitive": 11,
+        "functions": [
+          {
+            "name": "processJob",
+            "line": 13,
+            "complexity": 13,
+            "cognitiveComplexity": 11
+          },
+          {
+            "name": "processTextAnalysis",
+            "line": 88,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "(anonymous)",
+            "line": 89,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "processPdfConversion",
+            "line": 103,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 104,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "markJobCompleted",
+            "line": 116,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "markJobFailed",
+            "line": 138,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/core-enhanced-handlers.ts",
+          "line": 13,
+          "column": 1,
+          "severity": "warning",
+          "rule": "max-params",
+          "message": "Function \"processJob\" has 5 parameters. Maximum allowed is 4"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/core-enhanced-handlers.ts",
+          "line": 13,
+          "column": 1,
+          "severity": "warning",
+          "rule": "max-complexity",
+          "message": "Function \"processJob\" has a cyclomatic complexity of 13 (threshold: 10)"
+        }
+      ],
+      "score": {
+        "score": 80,
+        "grade": "B"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/core-enhanced-processing.ts",
+      "complexity": {
+        "cyclomatic": 14,
+        "cognitive": 22,
+        "functions": [
+          {
+            "name": "processJobBatch",
+            "line": 14,
+            "complexity": 14,
+            "cognitiveComplexity": 22
+          },
+          {
+            "name": "(anonymous)",
+            "line": 34,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 43,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "fetchPendingJobs",
+            "line": 88,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "markJobsAsProcessing",
+            "line": 126,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "(anonymous)",
+            "line": 135,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 142,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "notifyJobUpdateInternal",
+            "line": 148,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          }
+        ]
+      },
+      "issues": [
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/core-enhanced-processing.ts",
+          "line": 14,
+          "column": 1,
+          "severity": "warning",
+          "rule": "max-params",
+          "message": "Function \"processJobBatch\" has 8 parameters. Maximum allowed is 4"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/core-enhanced-processing.ts",
+          "line": 126,
+          "column": 1,
+          "severity": "warning",
+          "rule": "max-params",
+          "message": "Function \"markJobsAsProcessing\" has 5 parameters. Maximum allowed is 4"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/core-enhanced-processing.ts",
+          "line": 14,
+          "column": 1,
+          "severity": "warning",
+          "rule": "max-complexity",
+          "message": "Function \"processJobBatch\" has a cyclomatic complexity of 14 (threshold: 10)"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/core-enhanced-processing.ts",
+          "line": 14,
+          "column": 1,
+          "severity": "warning",
+          "rule": "max-cognitive-complexity",
+          "message": "Function \"processJobBatch\" has a cognitive complexity of 22 (threshold: 15)"
+        }
+      ],
+      "score": {
+        "score": 57,
+        "grade": "D"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/core-enhanced.ts",
+      "complexity": {
+        "cyclomatic": 10,
+        "cognitive": 8,
+        "functions": [
+          {
+            "name": "constructor",
+            "line": 32,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "extractShardIdFromName",
+            "line": 43,
+            "complexity": 6,
+            "cognitiveComplexity": 5
+          },
+          {
+            "name": "fetch",
+            "line": 62,
+            "complexity": 10,
+            "cognitiveComplexity": 8
+          },
+          {
+            "name": "alarm",
+            "line": 118,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "handleEnqueue",
+            "line": 126,
+            "complexity": 5,
+            "cognitiveComplexity": 4
+          },
+          {
+            "name": "startProcessing",
+            "line": 159,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "runProcessJobBatch",
+            "line": 169,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "(anonymous)",
+            "line": 180,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 181,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 182,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "getShardStats",
+            "line": 190,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/core.ts",
+      "complexity": {
+        "cyclomatic": 4,
+        "cognitive": 3,
+        "functions": [
+          {
+            "name": "getShardId",
+            "line": 22,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "getJobQueueStub",
+            "line": 35,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "insertJob",
+            "line": 46,
+            "complexity": 4,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "enqueueJob",
+            "line": 72,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "completeJob",
+            "line": 92,
+            "complexity": 3,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "sendHeartbeat",
+            "line": 115,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "getAllQueueInfo",
+            "line": 133,
+            "complexity": 3,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "(anonymous)",
+            "line": 143,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 144,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 159,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "kickAllShards",
+            "line": 173,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "(anonymous)",
+            "line": 183,
+            "complexity": 2,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "(anonymous)",
+            "line": 190,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "(anonymous)",
+            "line": 197,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 198,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "constructor",
+            "line": 208,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "fetch",
+            "line": 213,
+            "complexity": 3,
+            "cognitiveComplexity": 1
+          }
+        ]
+      },
+      "issues": [
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/core.ts",
+          "line": 208,
+          "column": 3,
+          "severity": "warning",
+          "rule": "no-empty-function",
+          "message": "Unexpected empty function"
+        }
+      ],
+      "score": {
+        "score": 97,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/fluent-query.ts",
+      "complexity": {
+        "cyclomatic": 6,
+        "cognitive": 5,
+        "functions": [
+          {
+            "name": "constructor",
+            "line": 36,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "withStatus",
+            "line": 42,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "forUser",
+            "line": 48,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "ofType",
+            "line": 54,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "inShard",
+            "line": 60,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "list",
+            "line": 66,
+            "complexity": 6,
+            "cognitiveComplexity": 5
+          },
+          {
+            "name": "(anonymous)",
+            "line": 71,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "count",
+            "line": 101,
+            "complexity": 6,
+            "cognitiveComplexity": 5
+          },
+          {
+            "name": "(anonymous)",
+            "line": 106,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "info",
+            "line": 133,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "kickAll",
+            "line": 139,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "stream",
+            "line": 144,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 145,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 146,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "(anonymous)",
+            "line": 150,
+            "complexity": 3,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "(anonymous)",
+            "line": 165,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "cleanup",
+            "line": 172,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/fluent.ts",
+      "complexity": {
+        "cyclomatic": 10,
+        "cognitive": 12,
+        "functions": [
+          {
+            "name": "constructor",
+            "line": 47,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "id",
+            "line": 54,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "userId",
+            "line": 60,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "type",
+            "line": 66,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "payload",
+            "line": 72,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "shard",
+            "line": 78,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "process",
+            "line": 83,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "on",
+            "line": 89,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "timeout",
+            "line": 95,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "maxRetries",
+            "line": 101,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "enqueue",
+            "line": 107,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "stream",
+            "line": 139,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 140,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 141,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 149,
+            "complexity": 10,
+            "cognitiveComplexity": 12
+          },
+          {
+            "name": "(anonymous)",
+            "line": 189,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "_getJobStatus",
+            "line": 196,
+            "complexity": 3,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "_emitEvent",
+            "line": 212,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 213,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "constructor",
+            "line": 224,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "job",
+            "line": 230,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "queue",
+            "line": 235,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "configure",
+            "line": 241,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "didoq",
+            "line": 250,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/index.ts",
+      "complexity": {
+        "cyclomatic": 0,
+        "cognitive": 0,
+        "functions": []
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/types.ts",
+      "complexity": {
+        "cyclomatic": 0,
+        "cognitive": 0,
+        "functions": []
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/websocket-enhanced-notifications.ts",
+      "complexity": {
+        "cyclomatic": 10,
+        "cognitive": 21,
+        "functions": [
+          {
+            "name": "handleNotification",
+            "line": 17,
+            "complexity": 3,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "handleBatchNotification",
+            "line": 44,
+            "complexity": 4,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "processNotificationQueue",
+            "line": 77,
+            "complexity": 10,
+            "cognitiveComplexity": 21
+          },
+          {
+            "name": "(anonymous)",
+            "line": 107,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 121,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/websocket-enhanced-notifications.ts",
+          "line": 105,
+          "column": 13,
+          "severity": "warning",
+          "rule": "max-depth",
+          "message": "Blocks are nested too deeply (5). Maximum allowed is 4"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/websocket-enhanced-notifications.ts",
+          "line": 17,
+          "column": 1,
+          "severity": "warning",
+          "rule": "max-params",
+          "message": "Function \"handleNotification\" has 5 parameters. Maximum allowed is 4"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/websocket-enhanced-notifications.ts",
+          "line": 44,
+          "column": 1,
+          "severity": "warning",
+          "rule": "max-params",
+          "message": "Function \"handleBatchNotification\" has 5 parameters. Maximum allowed is 4"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/websocket-enhanced-notifications.ts",
+          "line": 77,
+          "column": 1,
+          "severity": "warning",
+          "rule": "max-cognitive-complexity",
+          "message": "Function \"processNotificationQueue\" has a cognitive complexity of 21 (threshold: 15)"
+        }
+      ],
+      "score": {
+        "score": 66,
+        "grade": "C"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/websocket-enhanced.ts",
+      "complexity": {
+        "cyclomatic": 12,
+        "cognitive": 15,
+        "functions": [
+          {
+            "name": "constructor",
+            "line": 40,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 44,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "extractShardIdFromName",
+            "line": 52,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "fetch",
+            "line": 58,
+            "complexity": 5,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "handleWebSocketUpgrade",
+            "line": 88,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "(anonymous)",
+            "line": 102,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 106,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 110,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "handleWebSocketMessage",
+            "line": 123,
+            "complexity": 12,
+            "cognitiveComplexity": 15
+          },
+          {
+            "name": "subscribeToJob",
+            "line": 164,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "unsubscribeFromJob",
+            "line": 171,
+            "complexity": 3,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "handleWebSocketClose",
+            "line": 182,
+            "complexity": 3,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "alarm",
+            "line": 194,
+            "complexity": 11,
+            "cognitiveComplexity": 15
+          },
+          {
+            "name": "getStats",
+            "line": 231,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 237,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/websocket-enhanced.ts",
+          "line": 123,
+          "column": 1,
+          "severity": "warning",
+          "rule": "max-complexity",
+          "message": "Function \"handleWebSocketMessage\" has a cyclomatic complexity of 12 (threshold: 10)"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/websocket-enhanced.ts",
+          "line": 194,
+          "column": 1,
+          "severity": "warning",
+          "rule": "max-complexity",
+          "message": "Function \"alarm\" has a cyclomatic complexity of 11 (threshold: 10)"
+        }
+      ],
+      "score": {
+        "score": 85,
+        "grade": "B"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/websocket-utils.ts",
+      "complexity": {
+        "cyclomatic": 3,
+        "cognitive": 2,
+        "functions": [
+          {
+            "name": "hashCode",
+            "line": 15,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "getMonitorShardId",
+            "line": 27,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "getJobMonitorStub",
+            "line": 35,
+            "complexity": 3,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "getUserMonitorStub",
+            "line": 50,
+            "complexity": 3,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "getGlobalMonitorStub",
+            "line": 64,
+            "complexity": 3,
+            "cognitiveComplexity": 2
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/websocket.ts",
+      "complexity": {
+        "cyclomatic": 7,
+        "cognitive": 16,
+        "functions": [
+          {
+            "name": "constructor",
+            "line": 19,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 24,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "fetch",
+            "line": 32,
+            "complexity": 3,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "handleWebSocketUpgrade",
+            "line": 50,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "(anonymous)",
+            "line": 64,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "(anonymous)",
+            "line": 76,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 80,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "handleWebSocketMessage",
+            "line": 103,
+            "complexity": 5,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "handleWebSocketClose",
+            "line": 127,
+            "complexity": 3,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "subscribeToJob",
+            "line": 142,
+            "complexity": 4,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "unsubscribeFromJob",
+            "line": 168,
+            "complexity": 3,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "handleNotification",
+            "line": 181,
+            "complexity": 6,
+            "cognitiveComplexity": 8
+          },
+          {
+            "name": "alarm",
+            "line": 214,
+            "complexity": 7,
+            "cognitiveComplexity": 16
+          },
+          {
+            "name": "getJobStatus",
+            "line": 245,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "getJobMonitorStub",
+            "line": 259,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "notifyJobUpdate",
+            "line": 268,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/websocket.ts",
+          "line": 230,
+          "column": 13,
+          "severity": "warning",
+          "rule": "max-depth",
+          "message": "Blocks are nested too deeply (5). Maximum allowed is 4"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/websocket.ts",
+          "line": 214,
+          "column": 1,
+          "severity": "warning",
+          "rule": "max-cognitive-complexity",
+          "message": "Function \"alarm\" has a cognitive complexity of 16 (threshold: 15)"
+        }
+      ],
+      "score": {
+        "score": 87,
+        "grade": "B"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/core-enhanced.test.ts",
+      "complexity": {
+        "cyclomatic": 1,
+        "cognitive": 0,
+        "functions": [
+          {
+            "name": "createMockEnv",
+            "line": 10,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 12,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 20,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 23,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "createMockState",
+            "line": 28,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "toString",
+            "line": 30,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 42,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 45,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 50,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 56,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 60,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 61,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 63,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 70,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 71,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 81,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 100,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 123,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 124,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 143,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 156,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 157,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 177,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 198,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 199,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 225,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 241,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 247,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 248,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 272,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/core-enhanced.test.ts",
+          "line": 64,
+          "column": 42,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/core-enhanced.test.ts",
+          "line": 73,
+          "column": 45,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/core-enhanced.test.ts",
+          "line": 83,
+          "column": 45,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/core-enhanced.test.ts",
+          "line": 109,
+          "column": 45,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        }
+      ],
+      "score": {
+        "score": 88,
+        "grade": "B"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/mocks/cloudflare-workers.ts",
+      "complexity": {
+        "cyclomatic": 1,
+        "cognitive": 0,
+        "functions": [
+          {
+            "name": "constructor",
+            "line": 9,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "fetch",
+            "line": 14,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "alarm",
+            "line": 18,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/mocks/cloudflare-workers.ts",
+          "line": 6,
+          "column": 18,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/mocks/cloudflare-workers.ts",
+          "line": 7,
+          "column": 18,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/mocks/cloudflare-workers.ts",
+          "line": 9,
+          "column": 22,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/mocks/cloudflare-workers.ts",
+          "line": 9,
+          "column": 32,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        }
+      ],
+      "score": {
+        "score": 88,
+        "grade": "B"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/shard-processing.test.ts",
+      "complexity": {
+        "cyclomatic": 2,
+        "cognitive": 1,
+        "functions": [
+          {
+            "name": "createMockEnv",
+            "line": 14,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "createMockState",
+            "line": 35,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "toString",
+            "line": 38,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 51,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 54,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 59,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 60,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "(anonymous)",
+            "line": 73,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "(anonymous)",
+            "line": 86,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "toString",
+            "line": 89,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 100,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 101,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "(anonymous)",
+            "line": 125,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 130,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 131,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "(anonymous)",
+            "line": 152,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 168,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 169,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "(anonymous)",
+            "line": 186,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 187,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "(anonymous)",
+            "line": 205,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 206,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 211,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/shard-processing.test.ts",
+          "line": 52,
+          "column": 16,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/shard-processing.test.ts",
+          "line": 64,
+          "column": 68,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/shard-processing.test.ts",
+          "line": 67,
+          "column": 40,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/shard-processing.test.ts",
+          "line": 78,
+          "column": 68,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/shard-processing.test.ts",
+          "line": 81,
+          "column": 40,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/shard-processing.test.ts",
+          "line": 92,
+          "column": 66,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/shard-processing.test.ts",
+          "line": 95,
+          "column": 38,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/shard-processing.test.ts",
+          "line": 105,
+          "column": 68,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/shard-processing.test.ts",
+          "line": 135,
+          "column": 68,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/shard-processing.test.ts",
+          "line": 155,
+          "column": 66,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/shard-processing.test.ts",
+          "line": 158,
+          "column": 22,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/shard-processing.test.ts",
+          "line": 173,
+          "column": 68,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/shard-processing.test.ts",
+          "line": 191,
+          "column": 68,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/shard-processing.test.ts",
+          "line": 215,
+          "column": 66,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        }
+      ],
+      "score": {
+        "score": 60,
+        "grade": "C"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+      "complexity": {
+        "cyclomatic": 1,
+        "cognitive": 0,
+        "functions": [
+          {
+            "name": "constructor",
+            "line": 25,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "createMockEnv",
+            "line": 32,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 34,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "createMockState",
+            "line": 42,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "toString",
+            "line": 44,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 51,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 55,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 60,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 66,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 70,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 71,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 76,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 83,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 84,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 99,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 118,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 119,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 137,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 155,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 169,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 170,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 191,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 207,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 223,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 240,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 241,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 270,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 293,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 294,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 316,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 337,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 352,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 353,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 370,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+          "line": 20,
+          "column": 37,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+          "line": 29,
+          "column": 6,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+          "line": 73,
+          "column": 23,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+          "line": 133,
+          "column": 45,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+          "line": 150,
+          "column": 45,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+          "line": 157,
+          "column": 45,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+          "line": 178,
+          "column": 16,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+          "line": 181,
+          "column": 16,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+          "line": 186,
+          "column": 38,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+          "line": 195,
+          "column": 16,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+          "line": 196,
+          "column": 16,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+          "line": 199,
+          "column": 16,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+          "line": 203,
+          "column": 38,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+          "line": 209,
+          "column": 16,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+          "line": 211,
+          "column": 16,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+          "line": 225,
+          "column": 16,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+          "line": 227,
+          "column": 16,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+          "line": 234,
+          "column": 23,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+          "line": 235,
+          "column": 23,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+          "line": 236,
+          "column": 23,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+          "line": 246,
+          "column": 16,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+          "line": 248,
+          "column": 16,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+          "line": 263,
+          "column": 22,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+          "line": 272,
+          "column": 16,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+          "line": 275,
+          "column": 16,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+          "line": 282,
+          "column": 16,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+          "line": 299,
+          "column": 16,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+          "line": 305,
+          "column": 16,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+          "line": 318,
+          "column": 16,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+          "line": 325,
+          "column": 16,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+          "line": 326,
+          "column": 16,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+          "line": 333,
+          "column": 23,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+          "line": 334,
+          "column": 23,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+          "line": 357,
+          "column": 16,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+          "line": 358,
+          "column": 16,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+          "line": 359,
+          "column": 16,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+          "line": 362,
+          "column": 16,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+          "line": 365,
+          "column": 23,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+          "line": 366,
+          "column": 23,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+          "line": 367,
+          "column": 23,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+          "line": 373,
+          "column": 16,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+          "line": 374,
+          "column": 16,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+          "line": 375,
+          "column": 16,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+          "line": 378,
+          "column": 16,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+          "line": 381,
+          "column": 23,
+          "severity": "warning",
+          "rule": "no-any",
+          "message": "Avoid using \"any\" type"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-enhanced.test.ts",
+          "line": 384,
+          "column": 1,
+          "severity": "warning",
+          "rule": "max-lines",
+          "message": "File has 384 lines, exceeds maximum of 300"
+        }
+      ],
+      "score": {
+        "score": 50,
+        "grade": "D"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/test/websocket-utils.test.ts",
+      "complexity": {
+        "cyclomatic": 4,
+        "cognitive": 3,
+        "functions": [
+          {
+            "name": "(anonymous)",
+            "line": 15,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 16,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 17,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 23,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 29,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 35,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 42,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 43,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "(anonymous)",
+            "line": 58,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "(anonymous)",
+            "line": 72,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 83,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "createMockEnv",
+            "line": 84,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 86,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 87,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 90,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 91,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 95,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 111,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 114,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 115,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 125,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 128,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 134,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 135,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 138,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 139,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 153,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 154,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 157,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 158,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 171,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 172,
+            "complexity": 4,
+            "cognitiveComplexity": 3
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/vitest.config.ts",
+      "complexity": {
+        "cyclomatic": 0,
+        "cognitive": 0,
+        "functions": []
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    }
+  ],
+  "summary": {
+    "totalFiles": 22,
+    "totalIssues": 158,
+    "issuesBySeverity": {
+      "error": 0,
+      "warning": 157,
+      "info": 1
+    },
+    "averageComplexity": 1.6052009456264775,
+    "maxComplexity": {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/didoq2/src/core-enhanced-processing.ts",
+      "function": "processJobBatch",
+      "complexity": 14
+    }
+  },
+  "score": {
+    "overall": 75,
+    "grade": "B",
+    "distribution": {
+      "A": 9,
+      "B": 5,
+      "C": 3,
+      "D": 5,
+      "F": 0
+    }
+  }
+}

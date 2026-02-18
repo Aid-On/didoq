@@ -1,0 +1,38 @@
+{
+  "name": "@aid-on/didoq",
+  "version": "1.2.1",
+  "description": "DidoQ - Fluent API with nagare Stream integration for Cloudflare job queues",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "cloudflare",
+    "workers",
+    "durable-objects",
+    "d1",
+    "queue",
+    "fluent-api",
+    "nagare",
+    "streaming"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@aid-on/nagare": "^0.2.4"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241205.0",
+    "typescript": "^5.0.0",
+    "vitest": "^1.0.0"
+  }
+}
