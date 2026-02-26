@@ -8,7 +8,14 @@
     ".": {
       "types": "./src/index.ts",
       "default": "./src/index.ts"
+    },
+    "./client": {
+      "types": "./src/client.ts",
+      "default": "./src/client.ts"
     }
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0"
   },
   "scripts": {
     "build": "tsc",
