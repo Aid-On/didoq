@@ -34,6 +34,7 @@ export interface MonitorConfig {
 export interface MonitorCallbacks {
   onComplete: (resultId: string) => void;
   onError: (error: string) => void;
+  onProgress?: (phase: string, data: unknown) => void;
 }
 
 export interface JobMonitorResult {
@@ -61,6 +62,9 @@ interface WsMessage {
   jobId?: string;
   status?: string;
   data?: WsJobUpdateData;
+  phase?: string;
+  resultId?: string;
+  error?: string;
   timestamp?: string | number;
 }
 
@@ -203,8 +207,24 @@ export function useJobMonitor(
       if (stoppedRef.current) return;
       try {
         const msg = JSON.parse(event.data as string) as WsMessage;
+
+        // Direct messages from JobQueueDO (complete/error/progress)
+        if (msg.type === 'complete') {
+          const resultId = msg.resultId ?? msg.data?.result_id ?? msg.data?.resultId ?? jid;
+          handleComplete(resultId);
+          return;
+        }
+        if (msg.type === 'error') {
+          handleError(msg.error ?? msg.data?.error ?? 'ジョブが失敗しました');
+          return;
+        }
+        if (msg.type === 'progress') {
+          callbacksRef.current.onProgress?.(msg.phase ?? '', msg.data);
+          return;
+        }
+
+        // Legacy: job_update format
         if (msg.type !== 'job_update') return;
-        // jobId が含まれる場合は一致チェック（含まれない場合は通過させる）
         if (msg.jobId !== undefined && msg.jobId !== jid) return;
 
         if (msg.status === 'completed') {
