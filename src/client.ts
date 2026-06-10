@@ -6,6 +6,7 @@
  */
 
 import { useState, useEffect, useRef, useCallback } from 'react';
+import { nextPollDelay, wsReconnectDelay } from './poll-schedule';
 
 export type ConnectionStatus =
   | 'idle'
@@ -68,7 +69,6 @@ interface WsMessage {
   timestamp?: string | number;
 }
 
-const POLL_INTERVAL_MS = 2000;
 const WS_RECONNECT_BASE_MS = 1000;
 
 /**
@@ -89,8 +89,13 @@ export function useJobMonitor(
   const stoppedRef = useRef(false);
   const wsRef = useRef<WebSocket | null>(null);
   const pollTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const wsReconnectTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const timeoutTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const retryCountRef = useRef(0);
+  /** ポーリングループが稼働中か（多重起動の防止と WS 復帰時の停止に使う） */
+  const pollingActiveRef = useRef(false);
+  /** 適応間隔の段数（nextPollDelay へ渡す。ループ起動ごとにリセット） */
+  const pollCountRef = useRef(0);
 
   // staleクロージャを避けるためrefで最新値を参照
   const callbacksRef = useRef(callbacks);
@@ -103,10 +108,15 @@ export function useJobMonitor(
       clearTimeout(pollTimerRef.current);
       pollTimerRef.current = null;
     }
+    if (wsReconnectTimerRef.current !== null) {
+      clearTimeout(wsReconnectTimerRef.current);
+      wsReconnectTimerRef.current = null;
+    }
     if (timeoutTimerRef.current !== null) {
       clearTimeout(timeoutTimerRef.current);
       timeoutTimerRef.current = null;
     }
+    pollingActiveRef.current = false;
   }, []);
 
   const closeWs = useCallback(() => {
@@ -136,41 +146,66 @@ export function useJobMonitor(
     callbacksRef.current.onError(error);
   }, [clearTimers, closeWs]);
 
-  // HTTPポーリング
-  const startPolling = useCallback((jid: string) => {
+  /**
+   * 単発のステータス照会。終端（complete/error をディスパッチ済み）なら true。
+   * 一時エラー（ネットワーク・非2xx）は false（呼び出し側が次回に再試行）。
+   */
+  const checkStatus = useCallback(async (jid: string): Promise<boolean> => {
+    try {
+      const { apiBase, statusPath } = configRef.current;
+      const res = await fetch(`${apiBase}${statusPath}/${jid}`);
+      if (stoppedRef.current) return true;
+      if (!res.ok) return false;
+      const data = await res.json() as JobStatusResponse;
+      if (stoppedRef.current) return true;
+
+      if (data.status === 'completed') {
+        handleComplete(data.result_id ?? data.resultId ?? jid);
+        return true;
+      }
+      if (data.status === 'failed' || data.status === 'errored') {
+        handleError(data.error ?? 'ジョブが失敗しました');
+        return true;
+      }
+      return false;
+    } catch {
+      return false;
+    }
+  }, [handleComplete, handleError]);
+
+  /**
+   * HTTPポーリング（適応間隔: 800ms から ×1.5 で疎にし上限 4s、±20% ジッタ）。
+   *
+   * @param background true のときは WS 再接続と併走する安全網として動く:
+   *   status は変えず（WS 側が 'reconnecting' を表示）、WS が復帰したら
+   *   stopPolling で止まる。WS が maxRetries を使い切ったら background=false で
+   *   呼ばれ、status も 'polling' に切り替わる。
+   */
+  const startPolling = useCallback((jid: string, background = false) => {
     if (stoppedRef.current) return;
-    setStatus('polling');
+    if (!background) setStatus('polling');
+    if (pollingActiveRef.current) return; // ループは多重起動しない（status 更新のみ）
+    pollingActiveRef.current = true;
+    pollCountRef.current = 0;
 
     const poll = async () => {
-      if (stoppedRef.current) return;
-      try {
-        const { apiBase, statusPath } = configRef.current;
-        const res = await fetch(`${apiBase}${statusPath}/${jid}`);
-        if (!res.ok) {
-          if (!stoppedRef.current) {
-            pollTimerRef.current = setTimeout(poll, POLL_INTERVAL_MS);
-          }
-          return;
-        }
-        const data = await res.json() as JobStatusResponse;
-        if (stoppedRef.current) return;
-
-        if (data.status === 'completed') {
-          handleComplete(data.result_id ?? data.resultId ?? jid);
-        } else if (data.status === 'failed' || data.status === 'errored') {
-          handleError(data.error ?? 'ジョブが失敗しました');
-        } else {
-          pollTimerRef.current = setTimeout(poll, POLL_INTERVAL_MS);
-        }
-      } catch {
-        if (!stoppedRef.current) {
-          pollTimerRef.current = setTimeout(poll, POLL_INTERVAL_MS);
-        }
-      }
+      if (stoppedRef.current || !pollingActiveRef.current) return;
+      const terminal = await checkStatus(jid);
+      if (terminal || stoppedRef.current || !pollingActiveRef.current) return;
+      pollTimerRef.current = setTimeout(poll, nextPollDelay(pollCountRef.current++));
     };
 
     poll();
-  }, [handleComplete, handleError]);
+  }, [checkStatus]);
+
+  /** ポーリングループだけ止める（WS 復帰時。全体タイムアウトは維持） */
+  const stopPolling = useCallback(() => {
+    pollingActiveRef.current = false;
+    if (pollTimerRef.current !== null) {
+      clearTimeout(pollTimerRef.current);
+      pollTimerRef.current = null;
+    }
+  }, []);
 
   // WebSocket接続（再帰的に呼ばれるため前方参照をrefで解決）
   const connectWsRef = useRef<(jid: string) => void>(() => { /* 初期化前 */ });
@@ -193,10 +228,11 @@ export function useJobMonitor(
     }
 
     wsRef.current = ws;
-    const reconnectDelay = WS_RECONNECT_BASE_MS * Math.pow(2, currentRetry);
+    const reconnectDelay = wsReconnectDelay(currentRetry, WS_RECONNECT_BASE_MS);
 
     ws.onopen = () => {
       if (stoppedRef.current) { ws.close(); return; }
+      stopPolling(); // WS が権威になったので安全網ポーリングを止める
       setStatus('connected');
       retryCountRef.current = 0;
       setRetryCount(0);
@@ -252,13 +288,17 @@ export function useJobMonitor(
         // WebSocket諦め → HTTPポーリングにフォールバック
         startPolling(jid);
       } else {
-        pollTimerRef.current = setTimeout(
+        // WS 再接続を待つ間も安全網ポーリングを併走させる。
+        // 旧実装は再接続が全滅するまでポーリングを始めなかったため、
+        // WS が塞がれた環境では完了検知まで累計 2^maxRetries 秒待ちだった。
+        startPolling(jid, true);
+        wsReconnectTimerRef.current = setTimeout(
           () => connectWsRef.current(jid),
           reconnectDelay,
         );
       }
     };
-  }, [handleComplete, handleError, startPolling]);
+  }, [handleComplete, handleError, startPolling, stopPolling]);
 
   // refを常に最新に保つ
   connectWsRef.current = connectWs;
@@ -281,6 +321,8 @@ export function useJobMonitor(
     stoppedRef.current = false;
     retryCountRef.current = 0;
     setRetryCount(0);
+    pollingActiveRef.current = false;
+    pollCountRef.current = 0;
 
     // タイムアウト設定
     if (config.timeout > 0) {
@@ -292,6 +334,9 @@ export function useJobMonitor(
     }
 
     connectWs(jobId);
+    // WS の購読確立前にジョブが完了している競合（短いジョブで起きる）を
+    // 1 回だけの即時照会で拾う。未完了なら何もしない（WS/ポーリングに任せる）
+    void checkStatus(jobId);
 
     return () => {
       stoppedRef.current = true;

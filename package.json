@@ -21,7 +21,8 @@
     "build": "tsc",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "benchmark": "node bench/run.mjs"
   },
   "keywords": [
     "cloudflare",
@@ -39,6 +40,8 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20241205.0",
+    "@types/react": "18.3.31",
+    "react": "18.3.1",
     "typescript": "^5.0.0",
     "vitest": "^1.0.0"
   }
