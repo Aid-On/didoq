@@ -28,8 +28,8 @@ export declare class MockDurableObjectState {
     waitUntil(promise: Promise<unknown>): Promise<void>;
     storage: DurableObjectStorage;
     blockConcurrencyWhile: (fn: () => Promise<void>) => Promise<void>;
-    acceptWebSocket: import("vitest").Mock<any, any>;
-    getWebSockets: import("vitest").Mock<[], never[]>;
+    acceptWebSocket: import("vitest").Mock<import("@vitest/spy").Procedure>;
+    getWebSockets: import("vitest").Mock<() => never[]>;
 }
 /** Advanced mock with concurrency simulation */
 export declare class AdvancedMockDurableObjectState {
